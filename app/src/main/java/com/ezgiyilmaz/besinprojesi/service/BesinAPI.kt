@@ -6,6 +6,6 @@ import retrofit2.http.GET
 interface BesinAPI {
     //https://raw.githubusercontent.com/atilsamancioglu/BTK20-JSONVeriSeti/master/besinler.json
 
-    @GET("atilsamancioglu/BTK20-JSONVeriSeti/master/besinler.json")
+    @GET("base_url")
     suspend fun getBesin() : List<BesinModel> // hangi veriyi döndüreceği yazılır
 }
