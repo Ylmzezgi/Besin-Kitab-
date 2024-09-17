@@ -10,6 +10,7 @@ import com.ezgiyilmaz.besinprojesi.roomdb.BesinDatabase
 import kotlinx.coroutines.launch
 
 class BesinDetayViewModel(application: Application) :AndroidViewModel(application){
+    //tek bir besinin detayını göstereceği için tek bir besini tutacak livedata oluşturulur
     val besinLiveData=MutableLiveData<BesinModel>()
 
     fun roomVerisiniAl(uuid : Int) {

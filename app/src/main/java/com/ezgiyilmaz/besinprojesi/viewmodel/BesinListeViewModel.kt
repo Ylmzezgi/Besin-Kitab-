@@ -79,9 +79,10 @@ class BesinListeViewModel(application: Application): AndroidViewModel(applicatio
     }
 
 
-    private fun roomaKaydet(besinListesi: List<BesinModel>){
+    private fun roomaKaydet(besinListesi: List<BesinModel>){ //paranteze rooma neyi kaydedeceğim yazılır
         //Dao da yaptığımız bütün fonksiyonları suspend yaptığımız için o fonksiyoları kullanırken scope kullanmamız gerekiyor
         viewModelScope.launch {
+            //besin database ini invoke ile oluşturmuştuk bu yüzden room.db.builderı kullanmadan daoya ulaşabiliriz
             val dao=BesinDatabase(getApplication()).besinDao() //
             dao.deleteAllBesin()// internetten veri gelirse içersindekileri temizle
             val uuidListesi=dao.insertAll(*besinListesi.toTypedArray()) // her bir besine id atadık

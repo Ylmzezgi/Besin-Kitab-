@@ -14,7 +14,9 @@ fun ImageView.gorselIndir(url:String,placeholder: CircularProgressDrawable){
         .setDefaultRequestOptions(options) // görsel gelene kadar ne gösterileceği
         .load(url) // hangi url gelecek
         .into(this) // hangi imageViewin içine yükleneceği bilgisi verilir
+
 }
+
 fun placeHolderYap(context : Context) : CircularProgressDrawable{
     return CircularProgressDrawable(context).apply {
         strokeWidth=8f

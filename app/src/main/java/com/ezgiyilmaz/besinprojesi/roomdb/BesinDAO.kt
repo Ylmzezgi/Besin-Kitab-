@@ -18,7 +18,7 @@ interface BesinDAO {
     suspend fun deleteAllBesin()
 
     @Query("SELECT * FROM besinmodel WHERE uuid= :besinId") // tek bir besin silmek isterse
-    suspend fun getBesin(besinId:Int) : BesinModel
+    suspend fun getBesin(besinId:Int) : BesinModel // tek bir besin dönecek
 
     @Insert
     suspend fun insertAll(vararg besin:BesinModel) : List<Long>  // tek tek verileri eklemek yerine tek seferde birden fazla besin girebilmek için vararg kullanılır

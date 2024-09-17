@@ -36,8 +36,9 @@ class BesinDetayFragment : Fragment() {
 
         viewModel= ViewModelProvider(this)[BesinDetayViewModel::class.java]
 
+        //argüman gelirse besin id alınır
         arguments?.let {
-            besinId=BesinDetayFragmentArgs.fromBundle(it).besinId
+            besinId=BesinDetayFragmentArgs.fromBundle(it).besinId // besin idi alındı
 
         }
         viewModel.roomVerisiniAl(besinId)

@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class BesinAPIServis {
     val retrofit= Retrofit.Builder()
-        .baseUrl("base_url")
+        .baseUrl("https://raw.githubusercontent.com/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(BesinAPI::class.java)
